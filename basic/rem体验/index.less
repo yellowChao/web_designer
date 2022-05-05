@@ -1,0 +1,10 @@
+.average(@x) {
+    @average: (@x / 37.5rem);
+}
+
+.son {
+    .average(375);
+    width: @average;
+    height: @average;
+    background-color: yellow;
+}

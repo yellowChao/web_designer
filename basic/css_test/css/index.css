@@ -1,0 +1,299 @@
+/*版心*/
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.f_r {
+    float: right;
+}
+
+.f_l {
+    float: left;
+}
+
+.short-link {
+    background-color: #333;
+    height: 52px;
+
+}
+
+.short-link .container {
+    height: 52px;
+}
+
+.short-link .container li {
+    float: left;
+    line-height: 52px;
+    color: #666;
+}
+
+.short-link .container li a {
+    margin: 0 16px;
+    color: #dcdcdc;
+}
+
+
+.short-link .container li:last-child a {
+    margin-right: 0;
+}
+
+.short-link .container li:last-child a::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    background-color: yellow;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-top: -3px;
+    background: url(../images/sprites.png) -160px -70px;
+}
+
+.main-nav {
+    height: 131px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+.main-nav .logo {
+    width: 207px;
+    height: 70px;
+}
+
+
+.main-nav .logo a {
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    font-size: 0;
+    display: block ;
+}
+
+.main-nav nav li {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 48px;
+}
+
+.main-nav nav {
+    margin-left: 48px;
+}
+
+.main-nav nav li a:hover {
+    color: aqua;
+    border-bottom: aqua 1px solid;
+    padding-bottom: 7px;
+}
+
+.search  {
+    position: relative;
+    width: 172px;
+    height: 30px;
+    margin-top: 25px;
+    margin-left: 34px;
+}
+
+.search input {
+    width: 172px;
+    height: 30px;
+    border-bottom: #e7e7e7 2px solid;
+    padding-left: 40px;
+}
+
+.search::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sprites.png) -80px -70px;
+}
+
+.car {
+    position: relative;
+    width: 30px;
+    height: 35px;
+    margin-top: 25px;
+    margin-left: 10px;
+    background: url(../images/sprites.png) -118px -69px;
+}
+
+.car span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+}
+
+/*main 主体*/
+.main {
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.main .sidebar {
+    background-color: yellow;
+    width: 227px;
+    min-height: 500px;
+    margin-right: 18px;
+}
+
+.main .rightView {
+    flex: 1;
+}
+
+.main .dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+    height: 132px;
+    background-color: white;
+}
+
+.main .setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    border-right: 1px solid #f4f4f4;
+    padding-right: 68px;
+}
+
+.main .record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding-left: 68px;
+}
+
+.main .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 64px;
+    height: 53px;
+}
+
+.main .item img {
+    width: 25px;
+    height: 25px;
+    /*属性指定元素的内容应该如何去适应指定容器的高度与宽度。*/
+    object-fit:contain;
+}
+
+.main .item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.main .item i {
+    font-size: 25px;
+    color: #e05e30;
+}
+
+/*footer*/
+footer .feature {
+    background-color: #333;
+    height: 170px;
+} 
+
+footer .feature .container {
+    /* background-color: red; */
+    width: 1390px;
+    height: 170px;
+    box-sizing: border-box;
+    border-bottom: #434343 1px solid;
+} 
+
+footer .feature .container a {
+    float: left;
+    height: 100%;
+    line-height: 170px;
+    color: white;
+    text-align: center;
+    width: 33.3%;
+}
+
+.goodPrice::before {
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+    margin-right: 20px;
+    background: url(../images/sprites.png) 0px 0px;
+}
+
+.fast::before {
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+    margin-right: 20px;
+    background: url(../images/sprites.png) -66px 0px;
+}
+
+.fresh::before {
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+    margin-right: 20px;
+    background: url(../images/sprites.png) -130px 0px;
+}
+
+.copyright {
+    background-color: #333;
+    height: 163px;
+}
+
+.copyright .container {
+    color: white;
+    height: 163px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.copyright .container a {
+    color: white; 
+}
+
+/*common*/
+.pannel {
+    padding: 28px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.pannel_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    color: #333;
+}
+
+.pannel_title  a {
+    font-size: 16px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f7f7f8;
+        }
+
+        .main {
+            padding: 12px 11px 80px;
+        }
+
+        .address {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            height: 85px;
+            border-radius: 3px;
+        }
+
+        .locationIcon {
+            /* width: 30px;
+            height: 30px; */
+            font-size: 30px;
+            color: #54b196;
+        }
+
+        .pay {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 80px;
+            width: 100%;
+            border-top: 1px solid #ededed;
+        }
+
+        .payLeft {
+            padding-left: 20px;
+            color: #1e1e1e;
+            font-size: 11px;
+        }
+
+        .payLeft span {
+            color: #cf4444;
+            font-size: 20px;
+        }
+
+        .payRight {
+            margin-right: 11px;
+            width: 91px;
+            height: 35px;
+            background-color: #54b196;
+            border-radius: 3px;
+            text-align: center;
+            color: white;
+            line-height: 35px;
+            font-size: 13px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+        <div class="address">
+            <div class="userLeft">
+                <i class="iconfont icon-location locationIcon"></i>
+            </div>
+            <div class="userMid">2</div>
+            <div class="userRight">3</div>
+        </div>
+        
+
+    </div>
+
+    <div class="pay">
+        <div class="payLeft">
+            合计： <span>￥266.00</span>
+        </div>
+
+        <div class="payRight">去支付</div>
+    </div>
+
+    
+</body>
+</html>

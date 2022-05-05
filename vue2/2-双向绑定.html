@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+   
+    <div class="app">
+
+        <!-- v-model 可以绑定在输入标签中进行数据的双向绑定 -->
+        <select v-model="city" >
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+        </select>
+        
+        <P>选择了 {{ city }}</P>
+
+        <hr>
+
+        <!-- .number  .trim 是对v-model的修饰符 变数字， 去掉首尾空格 ； .lazy 是在change后触发更新，而不是实时触发-->
+        <input type="text" v-model.number='v1'>  +  <input type="text"  v-model.number='v2'> = <span>{{ v1 + v2 }}</span>
+       
+    </div>
+
+
+    <!-- 这是js在html页面头部引入的原因，自定义js文件要最后引入，因为要先有元素id,vue才能获取相应的元素 -->
+    <script>
+        const app = new Vue({
+            // el 控制页面中的哪个元素，值为选择器
+            el: '.app',
+            data: {
+                city: '',
+                v1: 1,
+                v2: 2,
+                result: 0
+            }
+        })
+    </script>
+</body>
+</html>

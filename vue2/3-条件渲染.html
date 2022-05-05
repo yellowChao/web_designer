@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+   
+    <div class="app">
+
+        <!-- 进行条件渲染， v-show 实际是设计 display: none; 来隐藏的，而v-if 是直接在文档流中移除该元素 -->
+       <p v-show="isShow">v-show</p>
+       <p v-if="isShow">v-if</p>
+       <p v-else-if="a > b">11</p>
+       <p v-else>111</p>
+       
+    </div>
+
+
+    <!-- 这是js在html页面头部引入的原因，自定义js文件要最后引入，因为要先有元素id,vue才能获取相应的元素 -->
+    <script>
+        const app = new Vue({
+            // el 控制页面中的哪个元素，值为选择器
+            el: '.app',
+            data: {
+                isShow: true
+            }
+        })
+    </script>
+</body>
+</html>

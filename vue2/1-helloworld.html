@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+   
+    <div class="app">
+        hello {{ userName }} !
+        <p v-text="userName"></p>
+
+        <!-- {{}} 插值表达式和v-text一直 -->
+
+        <hr>
+
+        <!-- v-html渲染html -->
+        <p v-html="htmlValue"></p>
+
+        <hr>
+
+        <!-- 属性绑定变量，也可以简写 -->
+        <input v-bind:placeholder='placeholder'>
+        <input :placeholder='placeholder'>
+
+        <hr>
+
+        <!-- <button v-on:click='add(2)'>add</button>  v-on:event 可以缩写@event --> 
+        <!-- $event vue封装的原生的事件对象 -->
+        <button @click='add(2, $event)'>add</button>
+        <p>count: {{ count }}</p>
+
+        <hr>
+
+        <a href='http:www.baidu.com' @click.prevent ='tap'>事件修饰符</a>
+
+
+        <!-- .prevent（阻止默认行为）  .stop（阻止事件冒泡） 是事件修饰符，放在@clikc后，  -->
+        <div class="yellow" style="background-color: red; height: 100px" @click="tapDiv">
+            <button @click.stop='tap'>click</button> 
+        </div>
+    </div>
+
+
+    <!-- 这是js在html页面头部引入的原因，自定义js文件要最后引入，因为要先有元素id,vue才能获取相应的元素 -->
+    <script>
+        const app = new Vue({
+            // el 控制页面中的哪个元素，值为选择器
+            el: '.app',
+            data: {
+                userName: 'yellow',
+                htmlValue: "<a href='#'>link<a/>",
+                placeholder: 'input value',
+                count: 0
+            },
+            methods: {
+                //es6写法
+                add(n, e) {
+                    console.log(e);
+                    //this = Vue对象，修改data中的数据
+                    this.count += n
+                },
+                tap() {
+                    console.log(222);
+                },
+                tapDiv(){
+                    console.log('tapDive')
+                }
+            },
+        })
+    </script>
+</body>
+</html>
