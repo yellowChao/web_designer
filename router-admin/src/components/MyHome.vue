@@ -1,6 +1,12 @@
 <template>
   <div class="home-container">
-    后台主页
+    <MyHeader/>
+    <div class="home-main-box">
+      <MyAside/>
+      <div class="home-main-body">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,6 +22,9 @@ export default {
   components: {
     MyHeader,
     MyAside,
+  },
+  created() {
+
   },
 }
 </script>

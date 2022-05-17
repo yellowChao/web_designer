@@ -7,7 +7,6 @@
     <table class="table table-bordered table-striped table-hover">
       <thead>
         <tr>
-          <th>#</th>
           <th>姓名</th>
           <th>年龄</th>
           <th>头衔</th>
@@ -15,12 +14,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
-          <td>xxx</td>
+        <tr v-for="item in userlist" :key="item.id">
+          <td>{{ item.name }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.position }}</td>
+          <td>
+            <router-link :to="`userInfo/${item.id}`">详情</router-link>
+          </td>
         </tr>
       </tbody>
     </table>
